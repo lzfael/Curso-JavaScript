@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalildade</title>
+    <style>
+        body{
+            background-color: rgb(175, 207, 127);
+            font-size: 19px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Em que país voce mora? <input type="text" id="nas">
+    <input type="button" id="butao" value="Enviar" onclick="Descobrir()">
+    <div id="res"></div>
+    <script>
+         function Descobrir() {
+            var local = document.querySelector(`#nas`);
+            var res = document.querySelector(`#res`);
+            var loc = local.value.toLowerCase();
+            if (loc == `brasil` || `brazil`){
+                res.innerHTML = `Voce é Brasileiro!`;
+            }
+            else{
+                res.innerHTML = `Voce é Estrangeiro!`;
+            }
+        }
+    </script>
+</body>
+</html>

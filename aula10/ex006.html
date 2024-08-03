@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #quadrado{
+            background-color: rgb(72, 180, 72);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="quadrado">
+        Interaja...
+    </div>
+    <script>
+        var cubo = document.getElementById(`quadrado`)
+        cubo.addEventListener(`click`, clicar)
+        cubo.addEventListener(`mouseenter`, entrar)
+        cubo.addEventListener(`mouseout`, sair)
+        
+        function clicar() {
+            cubo.innerText = `clicou`
+            cubo.style.background = `red`
+        }
+        function entrar() {
+            cubo.innerText = `Entrou`
+        }
+        function sair() {
+            cubo.innerText =  `Saiu`
+            cubo.style.background = `green`
+        }
+
+    </script>
+</body>
+</html>

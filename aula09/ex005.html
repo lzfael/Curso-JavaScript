@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos DOM</title>
+</head>
+<body>
+    <h1>Iniciando Estudos DOM</h1>
+    <p>Aprendendo a usar o <strong>Dom</strong> em <strong>JavaScript</strong> </p>
+    <p class="paragrafo1">Aqui vai o resultado</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var p1 = document.getElementsByTagName(`p`)[0]
+        var d = document.getElementById(`msg`)
+        var p2 = document.querySelector(`p.paragrafo1`)
+        p2.style.color = `red`
+        p1.style.color = `blue`
+    </script>
+</body>
+</html> 

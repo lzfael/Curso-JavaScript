@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Numeros</title>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2"> =
+    <input type="button" onclick="calcularSoma()" value="Somar">
+    <p id="res"></p>
+    <script>
+        
+            var numero1 = document.getElementById('txtn1')
+            var numero2 = document.getElementById('txtn2')
+            var resultado = document.getElementById('res')
+
+            function calcularSoma() {
+            var n1 = Number(numero1.value)
+            var n2 = Number(numero2.value)
+            var soma = n1 + n2
+
+            resultado.innerText = `Resultado: ${soma}`
+        }
+    </script>
+</body>
+</html>
